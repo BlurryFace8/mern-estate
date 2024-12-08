@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const userSchema  = new mongoose.Schema({
+const userSchema  = new mongoose.Schema(
+    {
     username:{
         type: String,
         required:true,
@@ -20,7 +21,8 @@ const userSchema  = new mongoose.Schema({
         type: String,
         default: "https://tse3.mm.bing.net/th?id=OIP.ruat7whad9-kcI8_1KH_tQHaGI&pid=Api&P=0&h=220"
     },
-}, {timestamps: true});
+}, 
+{timestamps: true});
 
 const User = mongoose.model('User',userSchema);
 
